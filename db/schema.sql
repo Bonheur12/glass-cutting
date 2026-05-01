@@ -1,0 +1,14 @@
+CREATE DATABASE IF NOT EXISTS smartglass;
+USE smartglass;
+
+CREATE TABLE IF NOT EXISTS jobs (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(120) NOT NULL,
+  sheet_width DECIMAL(10,2) NOT NULL,
+  sheet_height DECIMAL(10,2) NOT NULL,
+  allow_rotation TINYINT(1) NOT NULL DEFAULT 1,
+  pieces_json JSON NOT NULL,
+  best_layout_json JSON NOT NULL,
+  waste_percent DECIMAL(6,2) NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
