@@ -1,12 +1,11 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-body {
-  @apply bg-slate-100 text-slate-800 antialiased;
-  background-image: radial-gradient(circle at top right, rgba(59,130,246,.15), transparent 45%), radial-gradient(circle at bottom left, rgba(16,185,129,.12), transparent 40%);
-}
-
-.glass {
-  @apply bg-white/70 backdrop-blur-md border border-white/50 shadow-soft;
-}
+body { font-family: Inter, Arial, sans-serif; margin: 0; background: linear-gradient(180deg,#eef2ff,#f8fafc); color: #0f172a; }
+.page { max-width: 1280px; margin: 0 auto; padding: 24px; }
+.grid { display: grid; grid-template-columns: 380px 1fr; gap: 16px; }
+.panel { background: #fff; border-radius: 16px; padding: 16px; box-shadow: 0 8px 20px rgba(15,23,42,.08); }
+.grow { min-height: 640px; }
+input { width: 100%; margin: 6px 0 10px; padding: 8px; border: 1px solid #cbd5e1; border-radius: 8px; box-sizing: border-box; }
+button { margin-top: 8px; padding: 8px 12px; border-radius: 8px; border: 1px solid #cbd5e1; cursor: pointer; background: white; }
+button.primary { width: 100%; background: #2563eb; color: white; border: none; }
+.pieceRow { display: grid; grid-template-columns: 1fr 1fr 90px 84px; gap: 8px; align-items: center; }
+.board { margin-top: 8px; border-radius: 8px; border: 1px dashed #cbd5e1; background: #f8fafc; }
+ul { padding-left: 18px; }
